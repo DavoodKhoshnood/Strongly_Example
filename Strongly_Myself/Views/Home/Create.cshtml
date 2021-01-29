@@ -1,0 +1,26 @@
+﻿@model Strongly_Myself.Models.PersonViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add New Person</h2>
+<hr />
+<form action="/Home/Create" method="post">
+    <dl class="d-lg-block">
+        <dt>Name</dt>
+        <dd><input class="form-control" type="text" name="Name" /></dd>
+        <dt>Email</dt>
+        <dd><input class="form-control" type="email" name="Email" /></dd>
+        <dt>Phone</dt>
+        <dd><input class="form-control" type="text" name="Phone" /></dd>
+        <dt>Car Model</dt>
+        <dd><input class="form-control" type="text" name="CarModel" /></dd>
+        <dt>Car Reg No.</dt>
+        <dd><input class="form-control" type="text" name="CarPlaque" /></dd>
+
+        <dd><input class="btn btn-primary" type="submit" name="Save" value="Save" /></dd>
+
+    </dl>
+
+</form>
+

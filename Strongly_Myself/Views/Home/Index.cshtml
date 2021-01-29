@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Strongly_Myself.Models.PersonViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<hr />
+<a class="btn btn-success" href="/Home/Create">New</a>
+<table class="table table-bordered mt-2">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Car Model</th>
+        <th>Registr No.</th>
+        <th>Command</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+<tr>
+    <td>@item.ID</td>
+    <td>@item.Name</td>
+    <td>@item.Email</td>
+    <td>@item.Phone</td>
+    <td>@item.CarModel</td>
+    <td>@item.CarPlaque</td>
+    <td>
+        <a class="btn btn-primary btn-sm" href="/Home/Detail/@item.ID">Detail</a>
+        <a class="btn btn-warning btn-sm" href="/Home/Edit/@item.ID">Edit</a>
+        <a class="btn btn-danger btn-sm" href="/Home/Delete/@item.ID">Delete</a>
+    </td>
+</tr>
+    }
+</table>
